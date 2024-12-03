@@ -18,7 +18,6 @@ def analyze_text():
         data = json.loads(request.data)
         text = data['text']
         words = re.findall(r'\b\w+\b', text.lower())
-        words = words.split()
         word_counts = Counter(words)
         total_words = len(words)
         top_words = word_counts.most_common(10)
