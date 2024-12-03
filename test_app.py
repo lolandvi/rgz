@@ -13,6 +13,7 @@ class TestAPI(unittest.TestCase):
         self.assertEqual(result['total_words'], 9)
         self.assertIn(('this', 2), result['top_words'])
         self.assertIn(('is', 2), result['top_words'])
+        self.assertIn(('a', 2), result['top_words'])
         self.assertIn(('test', 2), result['top_words'])
 
     def test_missing_text(self):
