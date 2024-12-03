@@ -1,9 +1,9 @@
 import unittest
 import requests
-import json
+
 
 class TestAPI(unittest.TestCase):
-    BASE_URL = "http://127.0.0.1:5001/analyze" # Замените на ваш URL
+    BASE_URL = "http://127.0.0.1:5001/analyze"
 
     def test_analyze_text(self):
         data = {'text': 'This is a test text. This is a test.'}
@@ -14,7 +14,6 @@ class TestAPI(unittest.TestCase):
         self.assertIn(('this', 2), result['top_words'])
         self.assertIn(('is', 2), result['top_words'])
         self.assertIn(('test', 2), result['top_words'])
-
 
     def test_missing_text(self):
       response = requests.post(self.BASE_URL, json={})

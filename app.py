@@ -5,9 +5,11 @@ import json
 
 app = Flask(__name__)
 
+
 @app.route('/', methods=['GET'])
 def serve_index():
     return render_template('index.html')
+
 
 @app.route('/analyze', methods=['POST'])
 def analyze_text():
@@ -29,9 +31,9 @@ def analyze_text():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--port', type=int, default=5000)
     args = parser.parse_args()
     app.run(debug=True, port=args.port)
-
