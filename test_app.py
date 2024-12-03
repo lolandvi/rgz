@@ -10,7 +10,7 @@ class TestAPI(unittest.TestCase):
         response = requests.post(self.BASE_URL, json=data)
         self.assertEqual(response.status_code, 200)
         result = response.json()
-        self.assertEqual(result['total_words'], 9)
+        self.assertEqual(result['total_words'], 6)
         self.assertCountEqual(
             result['top_words'], [
                 ('a', 3), ('b', 2), ('c', 1)
