@@ -14,16 +14,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: '3.8'
 
       - name: Install dependencies
         run: |
-          pip install flake8 coverage bandit requests
+          pip install flake8 coverage bandit requests Flask
+
+      - name: Run Flask server
+        run: |
+          nohup python app.py --port=5001 > server.log 2>&1 &
+          sleep 5 
 
       - name: Run linter
         run: flake8 .
@@ -35,6 +40,10 @@ jobs:
 
       - name: Run security check
         run: bandit -r .
+        
+      - name: Stop Flask server
+        run: |
+          pkill -f "python app.py"
 
 
 
