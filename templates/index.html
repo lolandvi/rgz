@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Анализ текста</title>
+</head>
+<body>
+<h1>Анализ текста</h1>
+<form id="analyzeForm">
+  <textarea id="textInput" name="text" rows="10" cols="50"></textarea><br>
+  <button type="button" onclick="analyzeText()">Анализировать</button>
+</form>
+<div id="result"></div>
+
+<script>
+function analyzeText() {
+  const text = document.getElementById('textInput').value;
+  fetch('/analyze', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ text: text })
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('result').innerHTML = JSON.stringify(data, null, 2);
+  })
+  .catch(error => {
+    document.getElementById('result').innerHTML = 'Ошибка: ' + error;
+  });
+}
+</script>
+</body>
+</html>
+
