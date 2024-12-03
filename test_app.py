@@ -11,7 +11,9 @@ class TestAPI(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         result = response.json()
         self.assertEqual(result['total_words'], 9)
-        self.assertCountEqual(result['top_words'], [('this', 2), ('is', 2), ('a', 2), ('test', 2)]) 
+        self.assertCountEqual(
+            result['top_words'], [('this', 2), ('is', 2), ('a', 2), ('test', 2)]
+        )
 
     def test_missing_text(self):
         response = requests.post(self.BASE_URL, json={})
