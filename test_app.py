@@ -19,7 +19,7 @@ class TestAPI(unittest.TestCase):
         )
 
     def test_missing_text(self):
-        response = requests.post(self.BASE_URL, json=(), timeout=5)
+        response = requests.post(self.BASE_URL, json={}, timeout=5)
         self.assertEqual(response.status_code, 400)
 
 
