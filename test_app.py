@@ -6,7 +6,7 @@ class TestAPI(unittest.TestCase):
     BASE_URL = "http://127.0.0.1:5001/analyze"
 
     def test_analyze_text(self):
-        data = {'text': 'This is a test text. This is a test.'}
+        data = {'text': 'a a a b b c'}
         response = requests.post(self.BASE_URL, json=data)
         self.assertEqual(response.status_code, 200)
         result = response.json()
