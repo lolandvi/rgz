@@ -7,7 +7,7 @@ class TestAPI(unittest.TestCase):
 
     def test_analyze_text(self):
         data = {'text': 'a a a b b c'}
-        response = requests.post(self.BASE_URL, json=data)
+        response = requests.post(self.BASE_URL, json=data, timeout=5) 
         self.assertEqual(response.status_code, 200)
         result = response.json()
         self.assertEqual(result['total_words'], 6)
@@ -19,7 +19,7 @@ class TestAPI(unittest.TestCase):
         )
 
     def test_missing_text(self):
-        response = requests.post(self.BASE_URL, json={})
+        response = requests.post(self.BASE_URL, json=(), timeout=5) 
         self.assertEqual(response.status_code, 400)
 
 
