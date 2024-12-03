@@ -12,8 +12,9 @@ class TestAPI(unittest.TestCase):
         result = response.json()
         self.assertEqual(result['total_words'], 6)
         self.assertCountEqual(
-            result['top_words'], [
-                ('a', 3), ('b', 2), ('c', 1)
+            result['top_words'],
+            [
+                ['a', 3], ['b', 2], ['c', 1]
             ]
         )
 
