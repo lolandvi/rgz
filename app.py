@@ -2,6 +2,7 @@ import argparse
 from flask import Flask, request, jsonify, render_template
 from collections import Counter
 import json
+import re
 
 app = Flask(__name__)
 
@@ -16,7 +17,8 @@ def analyze_text():
     try:
         data = json.loads(request.data)
         text = data['text']
-        words = text.lower().split()
+        words = re.findall(r'\b\w+\b', text.lower()) 
+        words = words.split()
         word_counts = Counter(words)
         total_words = len(words)
         top_words = word_counts.most_common(10)
