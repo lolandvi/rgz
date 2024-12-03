@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install flake8 coverage bandit
+          pip install flake8 coverage bandit requests
 
       - name: Run linter
         run: flake8 .
