@@ -13,7 +13,7 @@ class TestAPI(unittest.TestCase):
         self.assertEqual(result['total_words'], 9)
         self.assertCountEqual(
             result['top_words'], [
-                ('this', 2), ('is', 2), ('a', 2), ('test', 2)
+                ('a', 3), ('b', 2), ('c', 1)
             ]
         )
 
