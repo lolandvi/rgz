@@ -8,7 +8,12 @@ import socket
 
 app = Flask(__name__)
 
-logging.basicConfig(filename='server.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.basicConfig(
+    filename='server.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(message)s'
+)
+
 
 @app.route('/', methods=['GET'])
 def serve_index():
@@ -45,5 +50,3 @@ if __name__ == '__main__':
     parser.add_argument('--port', type=int, default=5000)
     args = parser.parse_args()
     app.run(port=args.port)
-
-

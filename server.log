@@ -51,3 +51,18 @@
 2024-12-04 21:31:04,889 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5002
 2024-12-04 21:31:04,889 - [33mPress CTRL+C to quit[0m
+2024-12-04 21:31:08,869 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2024-12-04 21:31:08,869 - [33mPress CTRL+C to quit[0m
+2024-12-04 21:31:12,595 - 127.0.0.1 - - [04/Dec/2024 21:31:12] "GET / HTTP/1.0" 200 -
+2024-12-04 21:31:15,162 - 127.0.0.1 - - [04/Dec/2024 21:31:15] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:31:22,882 - 127.0.0.1 - - [04/Dec/2024 21:31:22] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:31:24,193 - 127.0.0.1 - - [04/Dec/2024 21:31:24] "GET / HTTP/1.0" 200 -
+2024-12-04 21:31:25,993 - 127.0.0.1 - - [04/Dec/2024 21:31:25] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:31:44,013 - 127.0.0.1 - - [04/Dec/2024 21:31:44] "GET / HTTP/1.0" 200 -
+2024-12-04 21:31:45,983 - 127.0.0.1 - - [04/Dec/2024 21:31:45] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:32:04,716 - 127.0.0.1 - - [04/Dec/2024 21:32:04] "GET / HTTP/1.0" 200 -
+2024-12-04 21:32:06,749 - 127.0.0.1 - - [04/Dec/2024 21:32:06] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:33:16,330 - 127.0.0.1 - - [04/Dec/2024 21:33:16] "[33mGET /announce?info_hash=%A34%C8%055%25%17%9B%A5S%EA%20%C8/%E4)~$H%AD&peer_id=-UT360W-%EE%B6m%DC%CC)%A5Yx%8DG%F5&port=33148&uploaded=6781169854&downloaded=0&left=0&corrupt=0&key=24FB09CA&event=started&numwant=200&compact=1&no_peer_id=1 HTTP/1.0[0m" 404 -
+2024-12-04 21:33:27,348 - 127.0.0.1 - - [04/Dec/2024 21:33:27] "[33mGET /announce?info_hash=y)%1c%86%AF%9D%9E.%BD9%EF%AB%FDDB%83f%85%F2%17&peer_id=-UT360W-%EE%B6m%DC%CC)%A5Yx%8DG%F5&port=33148&uploaded=596322117&downloaded=0&left=0&corrupt=0&key=00E38A25&event=started&numwant=200&compact=1&no_peer_id=1 HTTP/1.0[0m" 404 -
+2024-12-04 21:34:10,326 - 127.0.0.1 - - [04/Dec/2024 21:34:10] "[33mGET /announce?info_hash=V\u06ad%B2o%A2$%F9%14%EA%8E%7f%90{%82%CBod%09%CC&peer_id=-UT360W-%EE%B6m%DC%CC)%A5Yx%8DG%F5&port=33148&uploaded=108208681492&downloaded=0&left=0&corrupt=0&key=0507197F&event=started&numwant=200&compact=1&no_peer_id=1 HTTP/1.0[0m" 404 -
