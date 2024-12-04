@@ -1,35 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<title>Анализ текста</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ текста</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #result table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #result th, #result td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-<h1>Анализ текста</h1>
-<form id="analyzeForm">
-  <textarea id="textInput" name="text" rows="10" cols="50"></textarea><br>
-  <button type="button" onclick="analyzeText()">Анализировать</button>
-</form>
-<div id="result"></div>
+    <h1>Анализ текста</h1>
+    <form id="analyzeForm">
+        <textarea id="textInput" name="text" rows="10" cols="50"></textarea><br>
+        <button type="button" onclick="analyzeText()">Анализировать</button>
+    </form>
+    <div id="result"></div>
 
-<script>
-function analyzeText() {
-  const text = document.getElementById('textInput').value;
-  fetch('/analyze', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ text: text })
-  })
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('result').innerHTML = JSON.stringify(data, null, 2);
-  })
-  .catch(error => {
-    document.getElementById('result').innerHTML = 'Ошибка: ' + error;
-  });
-}
-</script>
+    <script>
+        function analyzeText() {
+            const text = document.getElementById('textInput').value;
+            fetch('/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({text: text})
+            })
+            .then(response => response.json())
+            .then(data => {
+                let resultHTML = '';
+                resultHTML += `<h2>Всего слов: ${data.total_words}</h2>`;
+                resultHTML += '<table>';
+                resultHTML += '<tr><th>Слово</th><th>Количество</th></tr>';
+                data.top_words.forEach(word => {
+                    resultHTML += `<tr><td>${word[0]}</td><td>${word[1]}</td></tr>`;
+                });
+                resultHTML += '</table>';
+                if (data.server_port) {
+                    console.log('Запрос обработан на порту:', data.server_port);
+                    resultHTML += '<p>Порт: ' + data.server_port + '</p>';
+                }
+                document.getElementById('result').innerHTML = resultHTML;
+            })
+            .catch(error => {
+                document.getElementById('result').innerHTML = 'Ошибка: ' + error;
+            });
+        }
+    </script>
 </body>
 </html>
-

@@ -1,0 +1,53 @@
+2024-12-04 21:21:14,162 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-12-04 21:21:14,162 - [33mPress CTRL+C to quit[0m
+2024-12-04 21:21:21,626 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2024-12-04 21:21:21,626 - [33mPress CTRL+C to quit[0m
+2024-12-04 21:21:27,349 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2024-12-04 21:21:27,349 - [33mPress CTRL+C to quit[0m
+2024-12-04 21:21:35,928 - Запрос на главную страницу
+2024-12-04 21:21:35,930 - 127.0.0.1 - - [04/Dec/2024 21:21:35] "GET / HTTP/1.0" 200 -
+2024-12-04 21:21:43,143 - Обработка запроса анализа
+2024-12-04 21:21:43,144 - 127.0.0.1 - - [04/Dec/2024 21:21:43] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:22:53,626 - Запрос на главную страницу
+2024-12-04 21:22:53,629 - 127.0.0.1 - - [04/Dec/2024 21:22:53] "GET / HTTP/1.0" 200 -
+2024-12-04 21:23:01,321 - Обработка запроса анализа
+2024-12-04 21:23:01,321 - 127.0.0.1 - - [04/Dec/2024 21:23:01] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:24:10,866 - Обработка запроса анализа
+2024-12-04 21:24:10,866 - 127.0.0.1 - - [04/Dec/2024 21:24:10] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:24:13,051 - Обработка запроса анализа
+2024-12-04 21:24:13,052 - 127.0.0.1 - - [04/Dec/2024 21:24:13] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:24:15,228 - Обработка запроса анализа
+2024-12-04 21:24:15,229 - 127.0.0.1 - - [04/Dec/2024 21:24:15] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:27:00,328 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5003
+2024-12-04 21:27:00,328 - [33mPress CTRL+C to quit[0m
+2024-12-04 21:27:10,586 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2024-12-04 21:27:10,586 - [33mPress CTRL+C to quit[0m
+2024-12-04 21:27:15,021 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-12-04 21:27:15,021 - [33mPress CTRL+C to quit[0m
+2024-12-04 21:27:18,934 - 127.0.0.1 - - [04/Dec/2024 21:27:18] "GET / HTTP/1.0" 200 -
+2024-12-04 21:27:36,281 - 127.0.0.1 - - [04/Dec/2024 21:27:36] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:27:41,734 - 127.0.0.1 - - [04/Dec/2024 21:27:41] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:27:45,598 - 127.0.0.1 - - [04/Dec/2024 21:27:45] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:28:32,069 - 127.0.0.1 - - [04/Dec/2024 21:28:32] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:28:34,547 - 127.0.0.1 - - [04/Dec/2024 21:28:34] "GET / HTTP/1.0" 200 -
+2024-12-04 21:28:36,584 - 127.0.0.1 - - [04/Dec/2024 21:28:36] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:28:42,670 - 127.0.0.1 - - [04/Dec/2024 21:28:42] "GET / HTTP/1.0" 200 -
+2024-12-04 21:28:44,930 - 127.0.0.1 - - [04/Dec/2024 21:28:44] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:28:50,554 - 127.0.0.1 - - [04/Dec/2024 21:28:50] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:28:52,879 - 127.0.0.1 - - [04/Dec/2024 21:28:52] "GET / HTTP/1.0" 200 -
+2024-12-04 21:28:54,788 - 127.0.0.1 - - [04/Dec/2024 21:28:54] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:30:39,487 - 127.0.0.1 - - [04/Dec/2024 21:30:39] "GET / HTTP/1.0" 200 -
+2024-12-04 21:30:47,906 - 127.0.0.1 - - [04/Dec/2024 21:30:47] "GET / HTTP/1.0" 200 -
+2024-12-04 21:30:50,178 - 127.0.0.1 - - [04/Dec/2024 21:30:50] "POST /analyze HTTP/1.0" 200 -
+2024-12-04 21:31:00,968 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2024-12-04 21:31:00,968 - [33mPress CTRL+C to quit[0m
+2024-12-04 21:31:04,889 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+2024-12-04 21:31:04,889 - [33mPress CTRL+C to quit[0m
