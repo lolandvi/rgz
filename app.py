@@ -30,8 +30,8 @@ def analyze_text():
         total_words = len(words)
         top_words = word_counts.most_common(10)
         # получаем порт из окружения
-        server_port = request.environ.get('SERVER_PORT')  
-        server_name = socket.gethostname() # получаем имя хоста
+        server_port = request.environ.get('SERVER_PORT')
+        server_name = socket.gethostname()  # получаем имя хоста
 
         result = {
             'total_words': total_words,
